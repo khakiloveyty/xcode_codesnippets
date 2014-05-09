@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define LoadCacheImage(name) [UIImage imageNamed:name]
+#define LoadDiskImage(name)  [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]]
+
+#define degreesToRadian(x) (M_PI * (x) / 180.0) //弧度转角度
+
+#define radianToDegrees(radian) (radian*180.0)/(M_PI)  //角度转弧度
+
+//读取本地图片的 和imageNamed一样，但是性能比后者要强很多，两个参数，前面一个是 文件名，后面一个是类型
+
+#define LoadImage(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]  //可以用来直接传图片名字
+
+#define LoadImageWithType(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AD859F17-9FBF-40E6-BE6C-9BB519AAD2DB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>图片相关宏</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

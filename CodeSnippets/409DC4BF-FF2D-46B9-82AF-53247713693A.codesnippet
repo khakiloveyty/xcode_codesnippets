@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define kHomePath        NSHomeDirectory()
+#define kCachePath      [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"]
+#define kDocumentFolder [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define kDocumentFolder2 [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+#define kLibraryPath [NSHomeDirectory() stringByAppendingPathComponent:@"Library"]
+#define kTempPath    NSTemporaryDirectory()
+#define kMainBoundPath [[NSBundle mainBundle] bundlePath]
+#define kResourcePath  [[NSBundle mainBundle] resourcePath]
+#define kExecutablePath [[NSBundle mainBundle] executablePath]</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>409DC4BF-FF2D-46B9-82AF-53247713693A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>文件路径相关宏</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

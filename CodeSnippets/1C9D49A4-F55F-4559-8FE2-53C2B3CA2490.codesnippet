@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#ifdef DEBUG
+#   define DLog(...) NSLog((@"%s [Line %d] %@"), __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#   define SLog(...) NSLog(__VA_ARGS__)
+#else
+#   define DLog(...)
+#   define SLog(...)
+#endif
+//SLog(kMainBoundPath, nil);
+
+//针对真机iPhone
+#if TARGET_OS_IPHONE
+//iPhone Device
+#endif
+
+//针对模拟器
+#if TARGET_IPHONE_SIMULATOR
+//iPhone Simulator
+#endif
+
+//ARC
+#if __has_feature(objc_arc)
+//compiling with ARC
+#define SAFE_RELEASE(x) x = nil
+#else
+// compiling without ARC
+#define SAFE_RELEASE(x) [x release];x=nil
+#endif</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1C9D49A4-F55F-4559-8FE2-53C2B3CA2490</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>调试相关宏</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
