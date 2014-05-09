@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//iOS7 NavigationBar颜色设置
+[[UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.000 green:0.549 blue:0.890 alpha:1.000];
+ //更改返回按钮颜色
+ [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+ //更改Tittle文字颜色
+ [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+ 
+ //设置状态栏颜色
+ //-----------------------------------------------------------------------------------
+ [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+ //-----------------------------------------------------------------------------------
+ 
+ 
+ //根据ViewController更改状态栏颜色，调用下面三个方法,并且需要在info.plist修改View controller-based status bar为YES
+ //------------------------------------------------
+ - (void)setNeedsStatusBarAppearanceUpdate;
+ //制定样式
+ - (UIStatusBarStyle)preferredStatusBarStyle;
+ //是否显示
+ - (BOOL)prefersStatusBarHidden;
+ //可选项，指定动画效果
+ - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation
+ //------------------------------------------------</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>77F0EC67-394A-4C67-85BE-62B94F3DBD13</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iOS7 状态栏&amp;导航栏</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
