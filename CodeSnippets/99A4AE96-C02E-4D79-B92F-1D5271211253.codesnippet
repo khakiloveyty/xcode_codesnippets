@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//@import AVFoundation;
+    //第一次调用这个方法的时候，系统会提示用户让他同意你的app获取麦克风的数据
+    // 其他时候调用方法的时候，则不会提醒用户
+    // 而会传递之前的值来要求用户同意
+    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+        if (granted) {
+            // 用户同意获取数据
+        } else {
+            // 可以显示一个提示框告诉用户这个app没有得到允许？
+        } 
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>99A4AE96-C02E-4D79-B92F-1D5271211253</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取麦克风请求</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

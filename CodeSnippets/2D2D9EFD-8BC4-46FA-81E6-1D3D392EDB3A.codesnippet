@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/*
+     UIImageRenderingModeAutomatic // 根据图片的使用环境和所处的绘图上下文自动调整渲染模式。
+     UIImageRenderingModeAlwaysOriginal // 始终绘制图片原始状态，不使用Tint Color。
+     UIImageRenderingModeAlwaysTemplate // 始终根据Tint Color绘制图片，忽略图片的颜色信息。
+     */
+
+    UIImage *img = [UIImage imageNamed:@"&lt;#CONTENT#&gt;"];
+    img = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2D2D9EFD-8BC4-46FA-81E6-1D3D392EDB3A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIimage渲染模式</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/*
+     *   使用NSAttributedString显示HTML
+     */
+    
+    NSString *html = @"&lt;bold&gt;Wow!&lt;/bold&gt; Now &lt;em&gt;iOS&lt;/em&gt; can create &lt;h3&gt;NSAttributedString&lt;/h3&gt; from HTMLs!";
+    NSDictionary *options = @{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType};
+    
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding]
+                                                                      options:options documentAttributes:nil error:nil];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>60EFDA6F-23F8-4038-B505-E52B3ACA824F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSAttributedString显示html</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

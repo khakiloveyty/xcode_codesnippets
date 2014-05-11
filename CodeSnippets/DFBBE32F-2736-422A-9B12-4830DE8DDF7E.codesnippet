@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/*
+     *  UIScreenEdgePanGestureRecognizer
+     */
+    UIScreenEdgePanGestureRecognizer *recognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:
+                                                    @selector(handleScreenEdgeRecognizer:)];
+    recognizer.edges = UIRectEdgeLeft; // accept gestures that start from the left; we're probably building another hamburger menu!
+    [self.view addGestureRecognizer:recognizer];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DFBBE32F-2736-422A-9B12-4830DE8DDF7E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIScrrenEdgeGesture屏幕手势</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

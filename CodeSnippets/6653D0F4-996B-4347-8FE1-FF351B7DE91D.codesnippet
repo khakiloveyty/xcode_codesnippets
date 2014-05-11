@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/*
+        使用这两个类给app提供语言合成的功能非常简单。AVSpeechUtterance 代表你想说什么，如何说。AVSpeechSynthesizer 用来发出这些声音，见以下代码片段：
+     */
+    AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc] init];
+    AVSpeechUtterance *utterance =
+    [AVSpeechUtterance speechUtteranceWithString:@"Wow, I have such a nice voice!"];
+    utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 4.0f;
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"]; // defaults to your system language
+    [synthesizer speakUtterance:utterance];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6653D0F4-996B-4347-8FE1-FF351B7DE91D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>AVSpeechUtterance语音合成</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//ios UITextView添加自定义连接
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"This is an example by @marcelofabri_"];
+    [attributedString addAttribute:NSLinkAttributeName
+                             value:@"username://marcelofabri_"
+                             range:[[attributedString string] rangeOfString:@"@marcelofabri_"]];
+    
+    
+    NSDictionary *linkAttributes = @{NSForegroundColorAttributeName: [UIColor greenColor],
+                                     NSUnderlineColorAttributeName: [UIColor lightGrayColor],
+                                     NSUnderlineStyleAttributeName: @(NSUnderlinePatternSolid)};
+    
+    // assume that textView is a UITextView previously created (either by code or Interface Builder)
+    textView.linkTextAttributes = linkAttributes; // customizes the appearance of links
+    textView.attributedText = attributedString;
+    textView.delegate = self;
+    
+    /*delegate
+     - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+     if ([[URL scheme] isEqualToString:@"username"]) {
+     NSString *username = [URL host];
+     // do something with this username
+     // ...
+     return NO;
+     }
+     return YES; // let the system open this URL
+     }
+     */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D67B4F75-F1EE-413D-9C98-D6A2E8A0E120</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITextView链接</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

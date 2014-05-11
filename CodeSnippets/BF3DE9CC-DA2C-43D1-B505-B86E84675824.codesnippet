@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/*
+     * Core Image来检测眨眼以及微笑
+     */
+    UIImage *image = [UIImage imageNamed:@"myImage"];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
+                                              context:nil
+                                              options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
+    
+    NSDictionary *options = @{ CIDetectorSmile: @YES, CIDetectorEyeBlink: @YES };
+    
+    NSArray *features = [detector featuresInImage:image.CIImage options:options];
+    
+    for (CIFaceFeature *feature in features) {
+        NSLog(@"Bounds: %@", NSStringFromCGRect(feature.bounds));
+        
+        if (feature.hasSmile) {
+            NSLog(@"Nice smile!");
+        } else {
+            NSLog(@"Why so serious?");
+        }
+        if (feature.leftEyeClosed || feature.rightEyeClosed) {
+            NSLog(@"Open your eyes!"); 
+        } 
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BF3DE9CC-DA2C-43D1-B505-B86E84675824</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Core Image来检测眨眼以及微笑</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

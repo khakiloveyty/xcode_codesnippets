@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//引入框架@import CoreTelephony.CTTelephonyNetworkInfo;
+/*
+ iOS7Tests[612:60b] Current Radio Access Technology: CTRadioAccessTechnologyEdge
+ iOS7Tests[612:1803] New Radio Access Technology: (null)
+ iOS7Tests[612:1803] New Radio Access Technology: CTRadioAccessTechnologyHSDPA
+ */
+    CTTelephonyNetworkInfo *telephonyInfo = [CTTelephonyNetworkInfo new];
+    NSLog(@"Current Radio Access Technology: %@", telephonyInfo.currentRadioAccessTechnology);
+    [NSNotificationCenter.defaultCenter addObserverForName:CTRadioAccessTechnologyDidChangeNotification
+                                                    object:nil
+                                                     queue:nil
+                                                usingBlock:^(NSNotification *note)
+    {
+        NSLog(@"New Radio Access Technology: %@", telephonyInfo.currentRadioAccessTechnology);
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3DAD0844-9758-4E5A-AED8-C7053836824F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取当前网络环境</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

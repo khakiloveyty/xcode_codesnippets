@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> /*
+     * 生成BASE64
+     */
+    
+    NSData* sampleData = [@"Some sample data" dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString * base64String = [sampleData base64EncodedStringWithOptions:0];
+    NSLog(@"Base64-encoded string is %@", base64String); // prints "U29tZSBzYW1wbGUgZGF0YQ=="
+    
+    NSData* dataFromString = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
+    NSLog(@"String is %@",[NSString stringWithUTF8String:[dataFromString bytes]]); // prints "String is Some sample data"</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CA79FB2A-019A-45E0-B98A-729E7A81427B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>生成BASE64</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
