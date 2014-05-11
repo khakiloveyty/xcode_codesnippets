@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSUInteger DeviceSystemMajorVersion();
+NSUInteger DeviceSystemMajorVersion() {
+    static NSUInteger _deviceSystemMajorVersion = -1;
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        _deviceSystemMajorVersion = [[[[[UIDevice currentDevice] systemVersion]
+                                       componentsSeparatedByString:@"."] objectAtIndex:0] intValue];
+    });
+    
+    return _deviceSystemMajorVersion;
+}
+#define &lt;#name#&gt; (DeviceSystemMajorVersion() &lt; 7)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4761CCD4-073A-45BA-86F7-BCED13579AC6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>判断版本号码</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
